@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tanvir Shaikh – Software Engineer (PHP/Laravel, Angular)</title>
+  <meta name="description" content="Portfolio of Tanvir Shaikh – Software Engineer specializing in PHP/Laravel, RESTful APIs, Angular, MySQL/PostgreSQL. Pune, India." />
+  <meta name="theme-color" content="#0ea5e9" />
+  <meta name="author" content="Tanvir Shaikh" />
+  <link rel="canonical" href="https://example.com/" />
+
+  <!-- Open Graph / Twitter -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Tanvir Shaikh – Software Engineer" />
+  <meta property="og:description" content="Backend-focused full‑stack dev: PHP/Laravel, APIs, Angular, MySQL." />
+  <meta property="og:image" content="/preview.png" />
+
+  <!-- Tailwind CSS CDN (JIT) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#effaff', 100: '#dff5ff', 200: '#b9ebff', 300: '#86dcfe',
+              400: '#4ec8fb', 500: '#10b4f7', 600: '#0ea5e9', 700: '#0b8ac4',
+              800: '#0b6e9a', 900: '#0a587a'
+            }
+          },
+          boxShadow: {
+            glass: '0 10px 40px rgba(2, 8, 23, .18)'
+          },
+          keyframes: {
+            fadeUp: { '0%': { opacity: 0, transform: 'translateY(16px)' }, '100%': { opacity: 1, transform: 'translateY(0)' } },
+            blink: { '0%, 100%': { opacity: 1 }, '50%': { opacity: 0 } },
+          },
+          animation: {
+            fadeUp: 'fadeUp .6s ease-out both',
+            blink: 'blink 1s step-end infinite'
+          }
+        }
+      },
+      darkMode: 'class'
+    }
+  </script>
+
+  <style>
+    /* Glassmorphism cards */
+    .glass { background: linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02)); backdrop-filter: blur(10px); border: 1px solid rgba(148,163,184,.2); }
+    /* Reveal on scroll */
+    .reveal { opacity: 0; transform: translateY(16px); transition: opacity .6s ease, transform .6s ease; }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+  </style>
+</head>
+<body class="bg-slate-950 text-slate-100 dark:bg-slate-950">
+  <!-- Gradient background decorations -->
+  <div aria-hidden="true" class="pointer-events-none fixed inset-0 -z-10">
+    <div class="absolute -top-24 -right-24 h-72 w-72 rounded-full bg-brand-500/20 blur-3xl"></div>
+    <div class="absolute top-1/2 -left-24 h-72 w-72 -translate-y-1/2 rounded-full bg-cyan-400/20 blur-3xl"></div>
+  </div>
+
+  <!-- Header -->
+  <header class="sticky top-0 z-50 border-b border-white/10 bg-slate-950/70 backdrop-blur">
+    <div class="mx-auto flex w-full max-w-6xl items-center justify-between px-4 py-3">
+      <a href="#home" class="flex items-center gap-2 font-semibold tracking-tight">
+        <span class="h-8 w-8 rounded-lg bg-gradient-to-br from-brand-400 to-cyan-300 shadow-glass"></span>
+        <span>Tanvir Shaikh</span>
+      </a>
+      <nav class="hidden items-center gap-6 text-sm text-slate-300 md:flex">
+        <a href="#about" class="hover:text-white">About</a>
+        <a href="#skills" class="hover:text-white">Skills</a>
+        <a href="#projects" class="hover:text-white">Projects</a>
+        <a href="#experience" class="hover:text-white">Experience</a>
+        <a href="#contact" class="hover:text-white">Contact</a>
+      </nav>
+      <div class="flex items-center gap-2">
+        <button id="themeToggle" class="glass rounded-xl p-2 text-slate-200" aria-label="Toggle dark mode">
+          <svg id="sun" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3v2m0 14v2m9-9h-2M5 12H3m14.95-6.95-1.414 1.414M7.464 16.536 6.05 17.95m12.9 0-1.414-1.414M7.464 7.464 6.05 6.05M12 8a4 4 0 110 8 4 4 0 010-8z"/></svg>
+          <svg id="moon" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="home" class="mx-auto max-w-6xl px-4">
+    <!-- Hero -->
+    <section class="grid items-center gap-8 py-12 md:grid-cols-2 md:py-16">
+      <div class="reveal">
+     <!--  <span class="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-slate-300">Open to opportunities · Pune</span>--> 
+        <h1 class="mt-4 text-4xl font-extrabold tracking-tight md:text-5xl">Hi, I’m <span class="bg-gradient-to-br from-brand-400 to-cyan-300 bg-clip-text text-transparent">Tanvir Shaikh</span>.</h1>
+        <p class="mt-2 text-xl text-slate-300">I craft scalable APIs and performant web apps.</p>
+        <p class="mt-3 text-slate-400">5+ years across Laravel, Zend, Angular, and MySQL/PostgreSQL. I love simplifying complex logic and boosting performance.</p>
+        <div class="mt-5 flex flex-wrap items-center gap-3">
+          <a href="#projects" class="glass rounded-xl px-4 py-2 font-semibold">View Projects</a>
+          <a href="mailto:abcd@gmail.com" class="rounded-xl bg-gradient-to-r from-brand-500 to-cyan-400 px-4 py-2 font-semibold text-slate-950 shadow-glass">Contact Me</a>
+          <span class="ml-2 align-middle text-sm text-slate-400">+91-9812345678</span>
+        </div>
+        <div class="mt-4 text-slate-300">
+          <span class="font-semibold">I am a </span>
+          <span id="typewriter" class="font-semibold"></span><span class="animate-blink">|</span>
+        </div>
+        <div class="mt-4 flex flex-wrap gap-2 text-sm text-slate-400">
+          <span>REST APIs</span>·<span>Tier engines</span>·<span>Query optimization</span>·<span>Clean architecture</span>
+        </div>
+      </div>
+      <div class="reveal md:justify-self-end">
+        <div class="glass relative overflow-hidden rounded-2xl border border-white/10 p-2 shadow-glass">
+          <img class="h-64 w-full rounded-xl object-cover md:h-80" src="https://images.unsplash.com/photo-1527980965255-d3b416303d12?q=80&w=1200&auto=format&fit=crop" alt="Developer workspace" loading="lazy" />
+          <div class="pointer-events-none absolute inset-0 bg-gradient-to-t from-slate-950/50 to-transparent"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="reveal py-10">
+      <h2 class="mb-4 flex items-center gap-3 text-2xl font-bold"><span class="h-2 w-2 rounded-full bg-brand-400"></span> About</h2>
+      <div class="grid gap-6 md:grid-cols-2">
+        <div class="glass rounded-2xl p-6">
+          <p class="text-slate-300">Experienced and detail‑oriented PHP Developer with 5+ years in backend development, RESTful API architecture, and database optimization. Skilled in building scalable web applications using Laravel and Zend, with Angular on the front‑end.</p>
+          <ul class="mt-4 grid grid-cols-2 gap-3 text-sm text-slate-400">
+            <li>📍 Pune, India</li>
+            <li>🔗 <a class="underline-offset-2 hover:underline" href="https://linkedin.com/in/ahmad-shaikh" target="_blank" rel="noreferrer">LinkedIn</a></li>
+            <li>✉️ <a class="underline-offset-2 hover:underline" href="mailto:abcd@gmail.com">abcd@gmail.com</a></li>
+            <li>☎️ +91-9812345678</li>
+          </ul>
+        </div>
+        <div class="grid gap-6 sm:grid-cols-2">
+          <div class="glass rounded-2xl p-5">
+            <p class="font-semibold">What I do</p>
+            <ul class="mt-2 space-y-1 text-sm text-slate-400">
+              <li>• Backend: PHP (Laravel, Zend)</li>
+              <li>• Frontend: Angular</li>
+              <li>• Databases: MySQL, PostgreSQL</li>
+              <li>• Tooling: Git, Bitbucket, CI/CD</li>
+            </ul>
+          </div>
+          <div class="glass rounded-2xl p-5">
+            <p class="font-semibold">Highlights</p>
+            <ul class="mt-2 space-y-1 text-sm text-slate-400">
+              <li>• Tier assignment engine, upgrades/downgrades</li>
+              <li>• Reporting UI for analytics</li>
+              <li>• 30% code efficiency gain</li>
+              <li>• 40% DB latency reduction</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills" class="reveal py-10">
+      <h2 class="mb-4 flex items-center gap-3 text-2xl font-bold"><span class="h-2 w-2 rounded-full bg-brand-400"></span> Skills</h2>
+      <div class="grid gap-6 md:grid-cols-2">
+        <div class="glass rounded-2xl p-6">
+          <div class="space-y-4">
+            <div>
+              <div class="mb-1 flex items-center justify-between text-sm"><span>PHP / Laravel</span><span>90%</span></div>
+              <div class="h-2 w-full rounded-full bg-white/10"><div class="skillbar h-2 w-0 rounded-full bg-gradient-to-r from-brand-500 to-cyan-400" data-percent="90"></div></div>
+            </div>
+            <div>
+              <div class="mb-1 flex items-center justify-between text-sm"><span>RESTful APIs</span><span>90%</span></div>
+              <div class="h-2 w-full rounded-full bg-white/10"><div class="skillbar h-2 w-0 rounded-full bg-gradient-to-r from-brand-500 to-cyan-400" data-percent="90"></div></div>
+            </div>
+            <div>
+              <div class="mb-1 flex items-center justify-between text-sm"><span>MySQL / PostgreSQL</span><span>85%</span></div>
+              <div class="h-2 w-full rounded-full bg-white/10"><div class="skillbar h-2 w-0 rounded-full bg-gradient-to-r from-brand-500 to-cyan-400" data-percent="85"></div></div>
+            </div>
+            <div>
+              <div class="mb-1 flex items-center justify-between text-sm"><span>Angular</span><span>75%</span></div>
+              <div class="h-2 w-full rounded-full bg-white/10"><div class="skillbar h-2 w-0 rounded-full bg-gradient-to-r from-brand-500 to-cyan-400" data-percent="75"></div></div>
+            </div>
+            <div>
+              <div class="mb-1 flex items-center justify-between text-sm"><span>JavaScript / TypeScript</span><span>80%</span></div>
+              <div class="h-2 w-full rounded-full bg-white/10"><div class="skillbar h-2 w-0 rounded-full bg-gradient-to-r from-brand-500 to-cyan-400" data-percent="80"></div></div>
+            </div>
+          </div>
+        </div>
+        <div class="grid gap-6 sm:grid-cols-2">
+          <div class="glass flex flex-col items-center justify-center gap-2 rounded-2xl p-6 text-slate-300">
+            <div class="text-3xl">⚙️</div>
+            <p class="text-center text-sm">Postman, Git, Bitbucket, Sourcetree, SVN</p>
+          </div>
+          <div class="glass flex flex-col items-center justify-center gap-2 rounded-2xl p-6 text-slate-300">
+            <div class="text-3xl">🧪</div>
+            <p class="text-center text-sm">Testing, debugging, performance tuning</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects (Simple CMS: editable JSON below) -->
+    <section id="projects" class="reveal py-10">
+      <h2 class="mb-4 flex items-center gap-3 text-2xl font-bold"><span class="h-2 w-2 rounded-full bg-brand-400"></span> Projects</h2>
+      <div id="projectFilters" class="mb-4 flex flex-wrap gap-2 text-sm">
+        <button class="filter glass rounded-xl px-3 py-1" data-filter="all">All</button>
+        <button class="filter glass rounded-xl px-3 py-1" data-filter="api">API</button>
+        <button class="filter glass rounded-xl px-3 py-1" data-filter="web">Web</button>
+        <button class="filter glass rounded-xl px-3 py-1" data-filter="admin">Admin</button>
+      </div>
+      <div id="projectsGrid" class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3"></div>
+    </section>
+
+    <!-- Experience -->
+    <section id="experience" class="reveal py-10">
+      <h2 class="mb-6 flex items-center gap-3 text-2xl font-bold"><span class="h-2 w-2 rounded-full bg-brand-400"></span> Experience</h2>
+      <ol class="relative border-l border-white/10">
+        <li class="mb-8 ml-6">
+          <span class="absolute -left-3 h-6 w-6 rounded-full bg-brand-500 ring-4 ring-brand-500/30"></span>
+          <h3 class="text-lg font-semibold">Software Engineer – ImmplyCloud India Pvt. Ltd</h3>
+          <p class="text-sm text-slate-400">Mar 2022 – Jun 2025 · Pune</p>
+          <ul class="mt-2 list-disc space-y-1 pl-5 text-slate-300">
+            <li>Created RESTful APIs for Annex Cloud Loyalty platform (Tier module).</li>
+            <li>Implemented tier assignment, upgrades/downgrades, expiration, retention logic.</li>
+            <li>Built Angular reporting for internal analytics.</li>
+            <li>Refactored legacy PHP; ~30% efficiency improvement.</li>
+            <li>Optimized MySQL; ~40% lower DB latency.</li>
+            <li>Collaborated with FE & QA across releases.</li>
+          </ul>
+        </li>
+        <li class="mb-8 ml-6">
+          <span class="absolute -left-3 h-6 w-6 rounded-full bg-brand-500 ring-4 ring-brand-500/30"></span>
+          <h3 class="text-lg font-semibold">Web Developer – Georeach Technologies</h3>
+          <p class="text-sm text-slate-400">Oct 2017 – Feb 2022</p>
+          <ul class="mt-2 list-disc space-y-1 pl-5 text-slate-300">
+            <li>Developed 10+ responsive UI components (HTML, CSS, JS).</li>
+            <li>Integrated third‑party APIs.</li>
+            <li>Testing and debugging for production stability.</li>
+            <li>Collaborated with cross‑functional teams.</li>
+          </ul>
+        </li>
+        <li class="ml-6">
+          <span class="absolute -left-3 h-6 w-6 rounded-full bg-brand-500 ring-4 ring-brand-500/30"></span>
+          <h3 class="text-lg font-semibold">Desktop Support Engineer – Intermedia Cable Communication</h3>
+          <p class="text-sm text-slate-400">Oct 2016 – Oct 2017</p>
+          <ul class="mt-2 list-disc space-y-1 pl-5 text-slate-300">
+            <li>Resolved software, hardware, and network issues.</li>
+            <li>Tracked issues and ensured follow‑ups.</li>
+          </ul>
+        </li>
+      </ol>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="reveal py-10">
+      <h2 class="mb-4 flex items-center gap-3 text-2xl font-bold"><span class="h-2 w-2 rounded-full bg-brand-400"></span> Contact</h2>
+      <div class="grid gap-6 md:grid-cols-2">
+        <form id="contactForm" class="glass rounded-2xl p-6">
+          <div class="grid gap-4 sm:grid-cols-2">
+            <label class="block" for="name">
+              <span class="mb-1 block text-sm">Name</span>
+              <input id="name" name="name" class="w-full rounded-xl border border-white/10 bg-transparent px-3 py-2 outline-none focus:ring-4 focus:ring-brand-500/20" required />
+            </label>
+            <label class="block" for="email">
+              <span class="mb-1 block text-sm">Email</span>
+              <input id="email" name="email" type="email" class="w-full rounded-xl border border-white/10 bg-transparent px-3 py-2 outline-none focus:ring-4 focus:ring-brand-500/20" required />
+            </label>
+          </div>
+          <label class="mt-4 block" for="message">
+            <span class="mb-1 block text-sm">Message</span>
+            <textarea id="message" name="message" rows="4" class="w-full rounded-xl border border-white/10 bg-transparent px-3 py-2 outline-none focus:ring-4 focus:ring-brand-500/20" required></textarea>
+          </label>
+          <div class="mt-4 flex items-center gap-3">
+            <button type="submit" class="rounded-xl bg-gradient-to-r from-brand-500 to-cyan-400 px-4 py-2 font-semibold text-slate-950 shadow-glass">Send</button>
+            <span id="formStatus" class="text-sm text-slate-400" role="status" aria-live="polite"></span>
+          </div>
+        </form>
+        <div class="grid gap-6 sm:grid-cols-2">
+          <a href="mailto:abcd@gmail.com" class="glass rounded-2xl p-6 hover:shadow-glass">
+            <p class="font-semibold">Email</p>
+            <p class="text-slate-400">abcd@gmail.com</p>
+          </a>
+          <a href="https://linkedin.com/in/ahmad-shaikh" class="glass rounded-2xl p-6 hover:shadow-glass" target="_blank" rel="noreferrer">
+            <p class="font-semibold">LinkedIn</p>
+            <p class="text-slate-400">/in/ahmad-shaikh</p>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="mt-10 border-t border-white/10 py-8 text-center text-slate-400">
+    <div class="mx-auto max-w-6xl px-4">
+      © <span id="year"></span> Ahmad Shaikh. Built with HTML + Tailwind + JS.
+    </div>
+  </footer>
+
+  <!-- Simple CMS: edit this JSON to update projects -->
+  <script>
+    const PROJECTS = [
+      {
+        title: 'Tier Management Module – Annex Cloud',
+        kind: ['api'],
+        image: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=1200&auto=format&fit=crop',
+        desc: 'Secure, scalable REST APIs for tiers: assignment, upgrades/downgrades, expiration, retention. JWT auth, validation, consistent JSON.',
+        tech: ['PHP', 'Zend', 'JWT', 'MySQL'],
+        live: 'https://www.annexcloud.com',
+        repo: ''
+      },
+      {
+        title: 'Backend Admin Panel – KisaanYard',
+        kind: ['admin','api','web'],
+        image: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=1200&auto=format&fit=crop',
+        desc: 'Role-based access for farmers/buyers/corporates, auction management, reporting, 3rd‑party API integrations.',
+        tech: ['PHP', 'MySQL', 'RBAC'],
+        live: 'https://www.kisaanyard.com',
+        repo: ''
+      },
+      {
+        title: 'The Inspiration – Beauty Salon',
+        kind: ['web','admin'],
+        image: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=1200&auto=format&fit=crop',
+        desc: 'Dynamic, responsive site with custom backend modules, inquiries, SEO‑friendly URLs, optimized performance.',
+        tech: ['PHP', 'MySQL', 'jQuery', 'HTML5'],
+        live: 'https://www.theinspiration.in',
+        repo: ''
+      }
+    ];
+  </script>
+
+  <!-- Behavior: theme, typewriter, scroll reveal, skills, projects, contact -->
+  <script>
+    // Theme toggle with localStorage
+    (function initTheme(){
+      const html = document.documentElement;
+      const saved = localStorage.getItem('theme');
+      if (!saved) {
+        html.classList.add('dark');
+      } else if (saved === 'dark') {
+        html.classList.add('dark');
+      } else {
+        html.classList.remove('dark');
+      }
+      const sun = document.getElementById('sun');
+      const moon = document.getElementById('moon');
+      function updateIcons(){
+        const dark = html.classList.contains('dark');
+        sun.classList.toggle('hidden', !dark);
+        moon.classList.toggle('hidden', dark);
+      }
+      updateIcons();
+      document.getElementById('themeToggle').addEventListener('click', () => {
+        html.classList.toggle('dark');
+        localStorage.setItem('theme', html.classList.contains('dark') ? 'dark' : 'light');
+        updateIcons();
+      });
+    })();
+
+    // Typewriter effect
+    (function typewriter(){
+      const roles = [
+        'PHP Developer',
+        'Full‑Stack Engineer',
+        'API Specialist',
+        'Database Optimizer'
+      ];
+      const el = document.getElementById('typewriter');
+      let i = 0, j = 0, deleting = false;
+      function tick(){
+        const word = roles[i % roles.length];
+        if (!deleting) {
+          el.textContent = word.substring(0, j++);
+          if (j > word.length + 8) deleting = true; // small pause
+        } else {
+          el.textContent = word.substring(0, j--);
+          if (j === 0) { deleting = false; i++; }
+        }
+        setTimeout(tick, deleting ? 40 : 90);
+      }
+      tick();
+    })();
+
+    // Reveal on scroll
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((e) => {
+        if (e.isIntersecting) {
+          e.target.classList.add('visible');
+          observer.unobserve(e.target);
+        }
+      })
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+    // Animate skill bars when visible
+    const skillObserver = new IntersectionObserver((entries) => {
+      entries.forEach((e) => {
+        if (e.isIntersecting) {
+          e.target.style.width = e.target.dataset.percent + '%';
+          skillObserver.unobserve(e.target);
+        }
+      })
+    }, { threshold: 0.5 });
+    document.querySelectorAll('.skillbar').forEach(el => skillObserver.observe(el));
+
+    // Projects renderer + filters (simple CMS)
+    const grid = document.getElementById('projectsGrid');
+    function renderProjects(filter = 'all'){
+      grid.innerHTML = '';
+      PROJECTS.filter(p => filter === 'all' || p.kind.includes(filter)).forEach(p => {
+        const card = document.createElement('article');
+        card.className = 'glass overflow-hidden rounded-2xl border border-white/10 shadow-glass';
+        card.innerHTML = `
+          <img src="${p.image}" alt="${p.title}" class="h-40 w-full object-cover" loading="lazy" />
+          <div class="p-4">
+            <h3 class="text-lg font-semibold">${p.title}</h3>
+            <p class="mt-1 text-sm text-slate-400">${p.desc}</p>
+            <div class="mt-2 flex flex-wrap gap-2 text-xs text-slate-300">${p.tech.map(t=>`<span class='rounded-full border border-white/10 px-2 py-0.5'>${t}</span>`).join('')}</div>
+            <div class="mt-3 flex gap-2">
+              ${p.live ? `<a class="rounded-xl bg-white/10 px-3 py-1 text-sm hover:bg-white/20" href="${p.live}" target="_blank" rel="noreferrer">Live</a>` : ''}
+              ${p.repo ? `<a class="rounded-xl bg-white/10 px-3 py-1 text-sm hover:bg-white/20" href="${p.repo}" target="_blank" rel="noreferrer">Code</a>` : ''}
+            </div>
+          </div>`;
+        grid.appendChild(card);
+      })
+    }
+    renderProjects();
+    document.querySelectorAll('.filter').forEach(btn => btn.addEventListener('click', () => renderProjects(btn.dataset.filter)));
+
+    // Contact form (demo only)
+    document.getElementById('contactForm').addEventListener('submit', (e) => {
+      e.preventDefault();
+      const status = document.getElementById('formStatus');
+      status.textContent = 'Sending…';
+      setTimeout(()=>{ status.textContent = 'Thank you! I\'ll get back to you soon.'; e.target.reset(); }, 700);
+    });
+
+    // Footer year
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
