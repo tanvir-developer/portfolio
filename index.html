@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Tanvir Shaikh – Software Engineer (PHP/Laravel, Angular)</title>
+  <title>Tanvir Shaikh – Software Engineer</title>
   <meta name="description" content="Portfolio of Tanvir Shaikh – Software Engineer specializing in PHP/Laravel, RESTful APIs, Angular, MySQL/PostgreSQL. Pune, India." />
   <meta name="theme-color" content="#0ea5e9" />
   <meta name="author" content="Tanvir Shaikh" />
@@ -50,6 +50,9 @@
     /* Reveal on scroll */
     .reveal { opacity: 0; transform: translateY(16px); transition: opacity .6s ease, transform .6s ease; }
     .reveal.visible { opacity: 1; transform: translateY(0); }
+    .navmobile{
+      background-color: #030f22;
+    }
   </style>
 </head>
 <body class="bg-slate-950 text-slate-100 dark:bg-slate-950">
@@ -63,9 +66,10 @@
   <header class="sticky top-0 z-50 border-b border-white/10 bg-slate-950/70 backdrop-blur">
     <div class="mx-auto flex w-full max-w-6xl items-center justify-between px-4 py-3">
       <a href="#home" class="flex items-center gap-2 font-semibold tracking-tight">
-        <span class="h-8 w-8 rounded-lg bg-gradient-to-br from-brand-400 to-cyan-300 shadow-glass"></span>
+        <img src="assets/logo2.png" alt="Tanvir Shaikh" class="h-8  rounded-lg from-brand-400 " />
         <span>Tanvir Shaikh</span>
       </a>
+      <!-- Desktop Nav -->
       <nav class="hidden items-center gap-6 text-sm text-slate-300 md:flex">
         <a href="#about" class="hover:text-white">About</a>
         <a href="#skills" class="hover:text-white">Skills</a>
@@ -73,13 +77,22 @@
         <a href="#experience" class="hover:text-white">Experience</a>
         <a href="#contact" class="hover:text-white">Contact</a>
       </nav>
-      <div class="flex items-center gap-2">
-        <button id="themeToggle" class="glass rounded-xl p-2 text-slate-200" aria-label="Toggle dark mode">
-          <svg id="sun" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3v2m0 14v2m9-9h-2M5 12H3m14.95-6.95-1.414 1.414M7.464 16.536 6.05 17.95m12.9 0-1.414-1.414M7.464 7.464 6.05 6.05M12 8a4 4 0 110 8 4 4 0 010-8z"/></svg>
-          <svg id="moon" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
-        </button>
-      </div>
+      <!-- Mobile Nav Button -->
+      <button id="mobileMenuBtn" class="md:hidden p-2 rounded-xl text-slate-200 focus:outline-none" aria-label="Open menu">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
     </div>
+    <!-- Mobile Nav Dropdown -->
+    <nav id="mobileNav" class="fixed top-0 left-0 w-full h-full bg-slate-950/95 z-50 flex-col items-center justify-center gap-8 text-lg text-slate-200 hidden">
+      <button id="closeMobileNav" class="absolute top-4 right-4 p-2 rounded-xl text-slate-200" aria-label="Close menu">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+      </button>
+      <a href="#about" class="block py-2 px-4 hover:text-brand-400 navmobile">About</a>
+      <a href="#skills" class="block py-2 px-4 hover:text-brand-400 navmobile">Skills</a>
+      <a href="#projects" class="block py-2 px-4 hover:text-brand-400 navmobile">Projects</a>
+      <a href="#experience" class="block py-2 px-4 hover:text-brand-400 navmobile">Experience</a>
+      <a href="#contact" class="block py-2 px-4 hover:text-brand-400 navmobile">Contact</a>
+    </nav>
   </header>
 
   <main id="home" class="mx-auto max-w-6xl px-4">
@@ -89,19 +102,18 @@
      <!--  <span class="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-slate-300">Open to opportunities · Pune</span>--> 
         <h1 class="mt-4 text-4xl font-extrabold tracking-tight md:text-5xl">Hi, I’m <span class="bg-gradient-to-br from-brand-400 to-cyan-300 bg-clip-text text-transparent">Tanvir Shaikh</span>.</h1>
         <p class="mt-2 text-xl text-slate-300">I craft scalable APIs and performant web apps.</p>
-        <p class="mt-3 text-slate-400">5+ years across Laravel, Zend, Angular, and MySQL/PostgreSQL. I love simplifying complex logic and boosting performance.</p>
+        <p class="mt-3 text-slate-400">More than 5 years of hands-on work with Core PHP, Laravel, Zend, Angular, and MySQL/PostgreSQL. I focus on simplifying complexity and delivering high-performance solutions</p>
         <div class="mt-5 flex flex-wrap items-center gap-3">
           <a href="#projects" class="glass rounded-xl px-4 py-2 font-semibold">View Projects</a>
-          <a href="mailto:abcd@gmail.com" class="rounded-xl bg-gradient-to-r from-brand-500 to-cyan-400 px-4 py-2 font-semibold text-slate-950 shadow-glass">Contact Me</a>
-          <span class="ml-2 align-middle text-sm text-slate-400">+91-9812345678</span>
+          <a href="#contact" class="rounded-xl bg-gradient-to-r from-brand-500 to-cyan-400 px-4 py-2 font-semibold text-slate-950 shadow-glass">Contact Me</a>
+          <!--<span class="ml-2 align-middle text-sm text-slate-400">+91-9812345678</span>-->
         </div>
         <div class="mt-4 text-slate-300">
-          <span class="font-semibold">I am a </span>
           <span id="typewriter" class="font-semibold"></span><span class="animate-blink">|</span>
         </div>
-        <div class="mt-4 flex flex-wrap gap-2 text-sm text-slate-400">
+       <!-- <div class="mt-4 flex flex-wrap gap-2 text-sm text-slate-400">
           <span>REST APIs</span>·<span>Tier engines</span>·<span>Query optimization</span>·<span>Clean architecture</span>
-        </div>
+        </div>-->
       </div>
       <div class="reveal md:justify-self-end">
         <div class="glass relative overflow-hidden rounded-2xl border border-white/10 p-2 shadow-glass">
@@ -119,26 +131,24 @@
           <p class="text-slate-300">Experienced and detail‑oriented PHP Developer with 5+ years in backend development, RESTful API architecture, and database optimization. Skilled in building scalable web applications using Laravel and Zend, with Angular on the front‑end.</p>
           <ul class="mt-4 grid grid-cols-2 gap-3 text-sm text-slate-400">
             <li>📍 Pune, India</li>
-            <li>🔗 <a class="underline-offset-2 hover:underline" href="https://linkedin.com/in/ahmad-shaikh" target="_blank" rel="noreferrer">LinkedIn</a></li>
-            <li>✉️ <a class="underline-offset-2 hover:underline" href="mailto:abcd@gmail.com">abcd@gmail.com</a></li>
-            <li>☎️ +91-9812345678</li>
+            <li>🔗 <a class="underline-offset-2 hover:underline" href="https://linkedin.com/in/tanvir-ahmad-shaikh" target="_blank" rel="noreferrer">LinkedIn</a></li>
+            <li>✉️ <a class="underline-offset-2 hover:underline" href="mailto:tanvir4net@gmail.com">tanvir4net@gmail.com</a></li>
+           <!--<li>☎️ +91-9812345678</li>-->
           </ul>
         </div>
         <div class="grid gap-6 sm:grid-cols-2">
           <div class="glass rounded-2xl p-5">
             <p class="font-semibold">What I do</p>
             <ul class="mt-2 space-y-1 text-sm text-slate-400">
-              <li>• Backend: PHP (Laravel, Zend)</li>
-              <li>• Frontend: Angular</li>
+              <li>• Backend: Core PHP ,Laravel, Zend</li>
+              <li>• Frontend: HTML,CSS, JavaScript, Angular</li>
               <li>• Databases: MySQL, PostgreSQL</li>
-              <li>• Tooling: Git, Bitbucket, CI/CD</li>
             </ul>
           </div>
           <div class="glass rounded-2xl p-5">
             <p class="font-semibold">Highlights</p>
             <ul class="mt-2 space-y-1 text-sm text-slate-400">
               <li>• Tier assignment engine, upgrades/downgrades</li>
-              <li>• Reporting UI for analytics</li>
               <li>• 30% code efficiency gain</li>
               <li>• 40% DB latency reduction</li>
             </ul>
@@ -178,7 +188,7 @@
         <div class="grid gap-6 sm:grid-cols-2">
           <div class="glass flex flex-col items-center justify-center gap-2 rounded-2xl p-6 text-slate-300">
             <div class="text-3xl">⚙️</div>
-            <p class="text-center text-sm">Postman, Git, Bitbucket, Sourcetree, SVN</p>
+            <p class="text-center text-sm">Postman, Git, Bitbucket, Sourcetree, SVN, Chatgpt, Github Copilot, Cursor AI</p>
           </div>
           <div class="glass flex flex-col items-center justify-center gap-2 rounded-2xl p-6 text-slate-300">
             <div class="text-3xl">🧪</div>
@@ -264,14 +274,14 @@
             <span id="formStatus" class="text-sm text-slate-400" role="status" aria-live="polite"></span>
           </div>
         </form>
-        <div class="grid gap-6 sm:grid-cols-2">
+        <div class="grid gap-6 sm:grid-cols-1">
           <a href="mailto:abcd@gmail.com" class="glass rounded-2xl p-6 hover:shadow-glass">
             <p class="font-semibold">Email</p>
-            <p class="text-slate-400">abcd@gmail.com</p>
+            <p class="text-slate-400">tanvir4net@gmail.com</p>
           </a>
           <a href="https://linkedin.com/in/ahmad-shaikh" class="glass rounded-2xl p-6 hover:shadow-glass" target="_blank" rel="noreferrer">
             <p class="font-semibold">LinkedIn</p>
-            <p class="text-slate-400">/in/ahmad-shaikh</p>
+            <p class="text-slate-400">https://linkedin.com/in/ahmad-shaikh</p>
           </a>
         </div>
       </div>
@@ -280,7 +290,7 @@
 
   <footer class="mt-10 border-t border-white/10 py-8 text-center text-slate-400">
     <div class="mx-auto max-w-6xl px-4">
-      © <span id="year"></span> Ahmad Shaikh.
+      © <span id="year"></span> Tanvir Shaikh.
     </div>
   </footer>
 
@@ -298,7 +308,7 @@
       },
       {
         title: 'Backend Admin Panel – KisaanYard',
-        kind: ['admin','api','web'],
+        kind: ['admin'],
         image: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=1200&auto=format&fit=crop',
         desc: 'Role-based access for farmers/buyers/corporates, auction management, reporting, 3rd‑party API integrations.',
         tech: ['PHP', 'MySQL', 'RBAC'],
@@ -319,39 +329,31 @@
 
   <!-- Behavior: theme, typewriter, scroll reveal, skills, projects, contact -->
   <script>
-    // Theme toggle with localStorage
-    (function initTheme(){
-      const html = document.documentElement;
-      const saved = localStorage.getItem('theme');
-      if (!saved) {
-        html.classList.add('dark');
-      } else if (saved === 'dark') {
-        html.classList.add('dark');
-      } else {
-        html.classList.remove('dark');
-      }
-      const sun = document.getElementById('sun');
-      const moon = document.getElementById('moon');
-      function updateIcons(){
-        const dark = html.classList.contains('dark');
-        sun.classList.toggle('hidden', !dark);
-        moon.classList.toggle('hidden', dark);
-      }
-      updateIcons();
-      document.getElementById('themeToggle').addEventListener('click', () => {
-        html.classList.toggle('dark');
-        localStorage.setItem('theme', html.classList.contains('dark') ? 'dark' : 'light');
-        updateIcons();
+    // Mobile nav functionality
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const mobileNav = document.getElementById('mobileNav');
+    const closeMobileNav = document.getElementById('closeMobileNav');
+    if (mobileMenuBtn && mobileNav && closeMobileNav) {
+      mobileMenuBtn.addEventListener('click', () => {
+        mobileNav.classList.remove('hidden');
       });
-    })();
+      closeMobileNav.addEventListener('click', () => {
+        mobileNav.classList.add('hidden');
+      });
+      // Close nav on link click
+      mobileNav.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          mobileNav.classList.add('hidden');
+        });
+      });
+    }
 
     // Typewriter effect
     (function typewriter(){
       const roles = [
-        'PHP Developer',
-        'Full‑Stack Engineer',
-        'API Specialist',
-        'Database Optimizer'
+      'I build reliable, maintainable web applications.',
+      'I love solving problems with clean code.',
+      'APIs, backend systems, and user friendly UI.'
       ];
       const el = document.getElementById('typewriter');
       let i = 0, j = 0, deleting = false;
